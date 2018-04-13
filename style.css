@@ -1,0 +1,10 @@
+*{
+	box-sizing: border-box;
+}
+body {
+	background-image: url(patt.png);
+}
+.conteiner {
+	width: 1170px;
+	margin: 0 auto;
+}
