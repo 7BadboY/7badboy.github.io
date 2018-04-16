@@ -49,6 +49,7 @@ header.header {
 .menu li:hover a{
 	color: white;
 }
-.search {
-	background: #FFFFFF;
+.submenu li{
+	display: none;
+	position: absolute;
 }
