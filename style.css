@@ -1,55 +1,417 @@
 *{
 	box-sizing: border-box;
 }
-body {
-	background-image: url(patt.png);
+@font-face{
+	font-family: Roboto Light;
+	src: url(fonts/Roboto-Light.ttf);
 }
-.container {
+@font-face{
+	font-family: Roboto Regular;
+	src: url(fonts/Roboto-Regular.ttf);
+}
+@font-face{
+	font-family: Roboto Bold;
+	src: url(fonts/Roboto-Bold.ttf);
+}
+body{
+	background-image: url(patt.png);	
+}
+header.header{
+	background: rgba(225,225,225,0.75);
+	padding: 20px;
+}
+.container{	
 	width: 1170px;
 	margin: 0 auto;
 }
-.row:after {
+.row:after{
 	content: "";
+	display: block;
 	clear: both;
-	display: block;
 }
-[class*="col-"] {
-	float: left;
+.col-md-3{
+	text-align: left;
+	margin-top: 20px;
+	width: 285px;
 }
-.col-lg-3 {
-	width: 25%;
-}
-.col-lg-6 {
-	width: 50%;
-}
-header.header {
-	padding: 25px 0;
-	background-color: rgba(255,255,255,0.80);
-}
-.menu li a{
-	text-decoration: none;
-	height: 50px;
-	line-height: 50px;
-	font-size: 21px;
-	display: block;
-	text-align: center;
-	color: #4a70b4;
-}
+/*.col-md-6{
+	width: 600px;
+}*/
 .menu li{
 	float: left;
 	width: 25%;
-	border-right: 1px solid #4a70b4;
+	border-right: 1px solid #2C71B8;
+	position: relative;
 }
-.menu li:first-child {
-	border-left: 1px solid #4a70b4;
-}
-.menu li:hover {
-	background: #4a70b4;
+.menu li:first-child{
+	border-left: 1px solid #2C71B8;
 }
 .menu li:hover a{
 	color: white;
 }
-.submenu li{
+.menu li a{
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-size: 21px;
+	height: 50px;
+	line-height: 50px;
+	font-family: Roboto Light;
+}
+.menu .subMenu {
 	display: none;
 	position: absolute;
+	width: 301px;
+	top: 100%;
+	left: -1px;	
+	color: #2C71B8;
+	z-index: 20;
+}
+.menu .subMenu > li {
+	text-decoration: none;
+	width: 100%;
+	left: 0%;
+	top: 15px;
+	border: initial;
+}
+.menu .subMenu > li > a{
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	padding-left: 10%;
+}
+.menu > li:hover .subMenu{	
+	background: #2C71B8;
+	display: block;
+}
+.subMenu > li:hover a{
+	display: block;
+	background: white;
+	color: #2C71B8;
+} 
+.ProductsA:hover .ProductsA{	
+	background: #2C71B8;
+}
+.search{
+	position: relative;
+}
+input[type="search"] {
+	border: none;
+	width: 200px;
+	height: 40px;	
+	border: 1px solid #2C71B8;
+	position: absolute;
+	top: -25px;
+	background: inherit;
+}
+input[placeholder="search"]{	
+	text-indent: 20px;
+	font-size: 21px;
+}
+::-webkit-input-placeholder {color:#2C71B8;}
+::-moz-placeholder          {color:#2C71B8;}/* Firefox 19+ */
+:-moz-placeholder           {color:#2C71B8;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#2C71B8;}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+.searchBeckgr{	
+	background: #2C71B8;
+	background-image: url(imgs/icon4.png);
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: center;
+	border: none;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -20px;
+	left: 165px;
+}
+.basket{
+	width: 40px;
+	height: 40px;
+	background: white;
+	background-image: url(imgs/icon1.png);
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: center;
+	position: absolute;
+	right: 0px; 
+	top: -25px;
+}
+.numberInBasket{
+	background-image: url(imgs/Прямоугольник.png);
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 30px; 
+	top: -35px;	
+}
+.numberInBasket > p{
+	text-align: center;
+	font-family: Roboto Light;
+}
+/* @media screen and (max-width: 424px){
+	.menu li a{font-size: 17px;}
+	.menu {padding-top: 5px;}
+} */
+.slide3{
+	height: 400px;	
+}
+p{
+	color: white;
+}
+.leftSide{
+	background: rgba(225,225,225,0.3);
+	width: 270px;
+	height: 840px;
+	padding: 0px;
+}
+.deviceType{
+	font-size: 21px;
+	text-transform: uppercase;
+	font-family: Roboto Bold;	
+	color: white;
+	margin: 44px 0 15px 0;
+}
+.deviceType:first-child{
+margin-top: 0px;
+}
+.checkboxesDiv {
+	padding: 35px 30px 30px 30px;
+}
+div .divInputLabel > input{
+	display: none;
+}
+label{
+	position: relative;
+	cursor: pointer;
+	margin-left: 22px;
+	color: white;
+	font-size: 21px;
+	font-family: Roboto Light;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+label:before{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid white;
+	position: absolute;
+	left: -22px;
+	top: 8px;
+}
+input[type="checkbox"]:checked + label:before{
+	background: white;
+}
+.showMoreOptions {
+	margin: 20px 0;
+}
+.showMoreOptions >a{
+	text-decoration: none;
+	text-transform: none;
+	font-size:21px;
+	font-family: Roboto Light;
+	text-align: center;
+	color: white;
+	margin: 0;	
+}
+.submitButton > input[type="submit"]{
+	margin: 0;
+	width: 210px;
+	height: 50px;
+	background: #2C71B8;
+	border: 1px solid white;
+	font-size: 21px;
+	text-transform: uppercase;
+	font-family: Roboto Bold;	
+	color: white;
+}
+.submitButton > input:hover{
+	background-color: white;
+	color: #2C71B8;
+}
+.breadcrumbs{
+	padding: 0;
+}
+#breadcrumbs li{
+	float: left;
+	margin: 25px 20px 25px 0;	
+}
+#breadcrumbs li a{
+	color: rgb(225,225,225,0.7);	
+	font-size: 	14px;
+}
+div > .LaptopsAndTablets {
+	font-size: 48px;
+	height: 50px;
+	box-sizing: border-box;
+	font-family: Roboto Bold;
+	margin: -10px 0 30px 0;
+	clear: both;
+}
+.sortByPrice{
+	margin-top: 65px;	
+}
+.sortByPrice > form > select{
+	width: 270px;	
+	height: 40px;
+	margin: 0px;
+	background-color: #2C71B8;
+	border: 1px solid #fff;
+	font-size: 21px;
+	font-family: Roboto Light;
+	color: #fff;
+	text-indent: 20px;
+}
+.products {
+	border: 1px solid white;
+	width: 270px;	
+}
+div .imgComp {
+	height: 180px;
+	width: 270px;	
+	position: relative;
+	background: rgba(225,225,225,0.75);
+}
+div .imgComp > a > img {
+	position: absolute;  	
+  	top: 45px;
+  	left: 85px;  	
+  	z-index: 2;
+} 
+.rect_Dash {
+	border: 1px solid #548CC5;
+	height: 30px;
+	width: 30px;
+	position: absolute;		
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: center;
+	background-image: url(imgs/icon8.png);
+	top: 10px;
+	left: 245px;
+}
+.rect_Dash:hover {
+	background-image: url(imgs/icon6.png);
+	border: 1px solid white;
+	background-color: #2C71B8;
+}
+.hart {
+	border: 1px solid #548CC5;
+	height: 30px;
+	width: 30px;
+	position: absolute;		
+	background-image: url(imgs/icon5.png);
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-position-x: center;
+	top: 50px;
+	left: 245px;
+}
+.hart:hover{
+	background-image: url(imgs/icon7.png);
+	border: 1px solid white;
+	background-color: #2C71B8;
+}
+.diviceInfo {
+	margin: 5px 5px 5px 15px;
+}
+.deviceName {
+	font-size: 30px;
+	font-family: Roboto Bold;
+}
+.description{
+	font-size: 21px;
+	font-family: Roboto Light;
+}
+.typeScreenSizeRam{
+	text-transform: uppercase;
+	font-size: 21px;
+	font-family: Roboto Bold;
+}
+.typeScreenSizeRamDescription{
+	font-size: 21px;
+	font-family: Roboto Light;
+}
+.devicePrice{
+	font-size: 48px;
+	text-align: center;
+	font-family: Roboto Bold;
+}
+.buttonsDetailsAdd{
+	margin: 0 0 30px 0;
+}
+.buttonsDetailsAdd > input {
+	width: 210px;
+	height: 50px;
+	margin: 15px 30px;
+	background: #2C71B8;
+	border: 1px solid white;
+	color: white;
+	font-family: Roboto Bold;
+	text-align: center;
+	font-size: 21px;
+	text-transform: uppercase;
+	background: rgba(225,225,225,0.3);
+	background-image: url(imgs/icon2.png);
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position-y: 12px;
+	background-position-x: 177px;
+}
+.buttonsDetailsAdd > input:first-child{
+	background: #2C71B8;
+}
+.buttonsDetailsAdd > input:hover{
+	background: white;
+	color: #2C71B8;	
+	background-image: url(imgs/icon1.png);
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position-y: 12px;
+	background-position-x: 177px;
+	left: 10px;
+	z-index: 5
+}
+.buttonsDetailsAdd > input:first-child:hover{
+	background: white;
+	color: #2C71B8;		
+}
+.productMarginTop {
+	margin-bottom: 40px;
+	height: 700px;
+} 
+.load{
+	font-size: 36px;
+	text-align: center;
+}
+.slide_3 {
+	font-size: 40px;
+	text-align: center;
+	line-height: 400px;
+	height: 400px;
+}
+header.header{
+	background: rgba(225,225,225,0.75);
+	padding: 20px;
+}
+footer{
+	background: rgba(225,225,225,0.75);
+	padding: 20px;
+	text-align: center;
+	height: 100px;	
+}
+footer>p {
+	font-size: 21px;
+	color: #4B82C0;
+	height: 50px;
+	line-height: 50px;
+}
+.slider {
+	
 }
